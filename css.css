@@ -1,0 +1,198 @@
+.container:where(.basvarcom-punkofop) {
+  --width: 213px;
+  --height: 275px;
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  margin: 20px 10px;
+  overflow: hidden
+}
+
+.container:where(.basvarcom-punkofop):hover .box:where(.basvarcom-punkofop),.container:where(.basvarcom-punkofop):hover .sheet:where(.basvarcom-punkofop),.container:where(.basvarcom-punkofop):hover .category:where(.basvarcom-punkofop),.container:where(.basvarcom-punkofop):hover .subtitle:where(.basvarcom-punkofop),.container:where(.basvarcom-punkofop):hover .number:where(.basvarcom-punkofop) {
+  opacity: .1
+}
+
+.container:where(.basvarcom-punkofop):hover .name:where(.basvarcom-punkofop) {
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center
+}
+
+.container:where(.basvarcom-punkofop):hover .author:where(.basvarcom-punkofop) {
+  z-index: 15
+}
+
+.container:where(.basvarcom-punkofop):hover .sticker:where(.basvarcom-punkofop) {
+  --scale: scale(9);
+  z-index: 15;
+  bottom: 150px;
+  left: 48%;
+  animation: move 1s steps(2) infinite
+}
+
+@keyframes move {
+  0%,to {
+      transform: translate(5px,10px) var(--scale)
+  }
+
+  10% {
+      transform: translate(-5px,-2px) var(--scale)
+  }
+
+  20% {
+      transform: translate(3px,5px) var(--scale)
+  }
+
+  30% {
+      transform: translate(-6px,-4px) var(--scale)
+  }
+
+  40% {
+      transform: translate(4px,4px) var(--scale)
+  }
+
+  50% {
+      transform: translate(-2px,-3px) var(--scale)
+  }
+
+  60% {
+      transform: translateY(6px) var(--scale)
+  }
+
+  70% {
+      transform: translate(-4px,-4px) var(--scale)
+  }
+
+  80% {
+      transform: translate(7px,7px) var(--scale)
+  }
+
+  90% {
+      transform: translate(-8px,-4px) var(--scale)
+  }
+}
+
+.container:where(.basvarcom-punkofop) .box:where(.basvarcom-punkofop) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url(./p.png);
+  background-size: var(--width) var(--height);
+  pointer-events: none;
+  position: absolute;
+  z-index: 5
+}
+
+.container:where(.basvarcom-punkofop) .sheet:where(.basvarcom-punkofop) {
+  background: #fff2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 4
+}
+
+.sticker:where(.basvarcom-punkofop) {
+  image-rendering: pixelated;
+  transform: scale(8);
+  position: absolute;
+  right: 65px;
+  bottom: 115px;
+  z-index: 2
+}
+
+.author-group:where(.basvarcom-punkofop) {
+  position: absolute;
+  right: 64px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%
+}
+
+.author:where(.basvarcom-punkofop) {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  border: 2px solid #777;
+  padding: 4px;
+  background: #000c
+}
+
+.author:where(.basvarcom-punkofop):hover {
+  border-color: #8B0000
+}
+
+.author-name:where(.basvarcom-punkofop) {
+  font-family: EnterCommand;
+  font-size: 17px;
+  color: #fff;
+  position: absolute;
+  text-align: right;
+  padding-top: 28px;
+  padding-right: 5px
+}
+
+.number:where(.basvarcom-punkofop) {
+  color: #fff;
+  font-family: Bebas Neue,sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 10
+}
+
+.category:where(.basvarcom-punkofop) {
+  color: #fff;
+  font-family: Montserrat,sans-serif;
+  text-transform: uppercase;
+  font-variation-settings: "wght" 600;
+  font-size: .4rem;
+  position: absolute;
+  width: 42px;
+  text-align: center;
+  top: 48px;
+  left: 22px;
+  z-index: 10
+}
+
+.name:where(.basvarcom-punkofop) {
+  --margin-left: 4em;
+  --margin-right: .5em;
+  --width: calc(100% - var(--margin-left) - var(--margin-right));
+  color: #111;
+  font-family: Bebas Neue,sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 22px;
+  width: var(--width);
+  text-align: center;
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right)
+}
+
+.subtitle:where(.basvarcom-punkofop) {
+  --margin-left: 6em;
+  --margin-right: .75em;
+  --width: calc(100% - var(--margin-left) - var(--margin-right));
+  color: #111;
+  font-family: Bebas Neue,sans-serif;
+  font-weight: 700;
+  font-size: .85rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  width: var(--width);
+  text-align: center;
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right)
+}
